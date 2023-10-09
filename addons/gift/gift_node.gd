@@ -147,7 +147,7 @@ func authenticate(client_id, client_secret) -> void:
 	print("Checking token...")
 	if (FileAccess.file_exists("user://gift/auth/user_token")):
 		var file : FileAccess = FileAccess.open_encrypted_with_pass("user://gift/auth/user_token", FileAccess.READ, client_secret)
-		token = JSON.parse_string(file.get_as_text())
+
 		if (token.has("scope") && scopes.size() != 0):
 			if (scopes.size() != token["scope"].size()):
 				get_token()
