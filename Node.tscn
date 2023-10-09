@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://cpmmgnc71rg58"]
+[gd_scene load_steps=13 format=3 uid="uid://cpmmgnc71rg58"]
 
 [ext_resource type="Script" path="res://Gift.gd" id="1"]
 [ext_resource type="Script" path="res://Button.gd" id="3"]
@@ -9,6 +9,7 @@
 [ext_resource type="Script" path="res://ChatContainer.gd" id="5"]
 [ext_resource type="Script" path="res://badgestext.gd" id="5_6y8ab"]
 [ext_resource type="Script" path="res://exampleButton.gd" id="11_d6wtr"]
+[ext_resource type="Script" path="res://examplechannelButton.gd" id="12_m0ki4"]
 [ext_resource type="Script" path="res://modmode.gd" id="15_wousj"]
 [ext_resource type="Script" path="res://modLabel.gd" id="16_0mi5o"]
 
@@ -106,7 +107,12 @@ script = ExtResource("3")
 [node name="MacroButtons" type="HBoxContainer" parent="ChatContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="exampleButton" type="Button" parent="ChatContainer/VBoxContainer/MacroButtons"]
+[node name="examplechatButton" type="Button" parent="ChatContainer/VBoxContainer/MacroButtons"]
 layout_mode = 2
-text = "example button"
+text = "example chat button"
 script = ExtResource("11_d6wtr")
+
+[node name="examplechannelButton" type="Button" parent="ChatContainer/VBoxContainer/MacroButtons"]
+layout_mode = 2
+text = "example channel button"
+script = ExtResource("12_m0ki4")
