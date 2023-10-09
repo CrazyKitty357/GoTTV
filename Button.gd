@@ -1,8 +1,11 @@
 extends Button
 
 func _pressed():
-	if Streamer.mod:
-		$"../../../../Gift".chat($"../LineEdit".text)
+	if $"../LineEdit".text == "":
+			print("Error: Field can't be blank")
 	else:
-		$"../../../../Gift".chat($"../LineEdit".text + Streamer.watermark)
-	$"../LineEdit".text = ""
+			if Streamer.mod:
+				$"../../../../Gift".chat($"../LineEdit".text)
+			else:
+				$"../../../../Gift".chat($"../LineEdit".text + Streamer.watermark)
+				$"../LineEdit".text = ""
